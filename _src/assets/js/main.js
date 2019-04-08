@@ -9,9 +9,9 @@
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * 100);  
   } 
-
+const aleatoryNumber = getRandomNumber();
 // Comprobar que hasta aquí va bien
-console.log(getRandomNumber());
+// console.log(aleatoryNumber);
 
 // Recoger input
 const testNumberEl = document.querySelector('.test__number');
@@ -34,6 +34,7 @@ function handleButtonClick(event) {
 // console.log('CLICK');
 
     // Si número aleatorio es correcto
+    
         // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
     // Si mayor que número aleatorio
         // Escribir  "demasiado alto" en div de feedback
