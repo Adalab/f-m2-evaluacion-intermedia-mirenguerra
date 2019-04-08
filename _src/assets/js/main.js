@@ -11,7 +11,7 @@ function getRandomNumber(max) {
   } 
 const aleatoryNumber = getRandomNumber();
 // Comprobar que hasta aquí va bien
-// console.log(aleatoryNumber);
+console.log(aleatoryNumber);
 
 // Recoger input
 const testNumberEl = document.querySelector('.test__number');
@@ -34,11 +34,20 @@ function handleButtonClick(event) {
 // console.log('CLICK');
 
     // Si número aleatorio es correcto
-    
-        // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
+     // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
+    if (aleatoryNumber===testNumberEl.value){
+        testFeedbackEl.innerHTML = 'HAS GANADO, CAMPEONA!';
+    }   
     // Si mayor que número aleatorio
         // Escribir  "demasiado alto" en div de feedback
+    else if (aleatoryNumber<testNumberEl.value){
+        testFeedbackEl.innerHTML = 'Demasiado alto';
+    }
     // Si no
         //Escribir "demasiado bajo" en div de feedback
+    else {
+        testFeedbackEl.innerHTML = 'Demasiado bajo';
+    }
 }
-// Generar contador
+
+// Generar contador (for)
