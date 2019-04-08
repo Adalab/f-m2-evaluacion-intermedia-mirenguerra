@@ -1,6 +1,6 @@
 'use strict';
 
-// Se trata de un juego que consiste en adivinar un número aleatorio del 1 al 100, nos van dando pistas de si es muy bajo o muy alto y hay un contador de intentos que llevamos.
+// Se trata de un juego que consiste en adivinar un número aleatorio (oculto) del 1 al 100, nos van dando pistas de si es muy bajo o muy alto y hay un contador de intentos que llevamos.
 // En la pantalla hay un input para intriducir el número, un botón para probar si he acertado, un espacio para el feedback y un espacio para el contador de intentos.
 // Usamos las funciones Math.random y Math.ceil par crear el número aleatorio.
 
@@ -10,7 +10,7 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * 100);  
   } 
 const aleatoryNumber = getRandomNumber();
-// Comprobar que hasta aquí va bien
+// Comprobar que hasta aquí va bien, me interesa ver el númeor para hacer pruebas ahora
 console.log(aleatoryNumber);
 
 // Recoger input
