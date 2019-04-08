@@ -6,31 +6,38 @@
 
 
 // Generar número aleatorio (Math.random y Math.ceil)
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * 100);  
+  } 
+
 // Comprobar que hasta aquí va bien
+console.log(getRandomNumber());
 
 // Recoger input
+const testNumberEl = document.querySelector('.test__number');
 // Recoger div de feedback
+const testFeedbackEl = document.querySelector('.test__feedback');
 // Recoger div de contador
-
-// Escuchar el click del botón
+const testCounterEl = document.querySelector('.test__counter');
+// Recoger botón de prueba
+const testButton = document.querySelector('.test__btn');
 // Comprobar que hasta aquí va bien
+// console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton);
 
-// Añadir handler al click del botón y comprobar si se ha acertado
-// Comprobar que hasta aquí va bien
+// Escuchar click en botón
+testButton.addEventListener('click', handleButtonClick);
+// Crear handler de click en botón
+function handleButtonClick(event) {
+  event.preventDefault();
 
-    // Si número aleatori es correcto
+// En este punto compruebo
+// console.log('CLICK');
+
+    // Si número aleatorio es correcto
         // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
     // Si mayor que número aleatorio
         // Escribir  "demasiado alto" en div de feedback
     // Si no
         //Escribir "demasiado bajo" en div de feedback
-
+}
 // Generar contador
-
-
-
-
-
-
-
-
