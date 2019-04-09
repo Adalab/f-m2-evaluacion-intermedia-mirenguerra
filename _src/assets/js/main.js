@@ -5,14 +5,6 @@
 // Usamos las funciones Math.random y Math.ceil par crear el número aleatorio.
 
 
-// Generar número aleatorio (Math.random y Math.ceil)
-function getRandomNumber(max) {
-    return Math.ceil(Math.random() * 100);  
-  } 
-const aleatoryNumber = getRandomNumber();
-// Comprobar que hasta aquí va bien, me interesa ver el númeor para hacer pruebas ahora
-console.log(aleatoryNumber);
-
 // Recoger input
 const testNumberEl = document.querySelector('.test__number');
 // Recoger div de feedback
@@ -21,26 +13,42 @@ const testFeedbackEl = document.querySelector('.test__feedback');
 const testCounterEl = document.querySelector('.test__counter');
 // Recoger botón de prueba
 const testButton = document.querySelector('.test__btn');
+// Recoger resultado de la función getRandomNumber
+const aleatoryNumber = getRandomNumber();
+
 // Comprobar que hasta aquí va bien
 // console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton);
+// Me interesa ver el número para hacer pruebas ahora
+console.log(aleatoryNumber);
+
+// Generar número aleatorio (Math.random y Math.ceil)
+function getRandomNumber() {
+    return Math.ceil(Math.random() * 100);  
+  } 
+
+
+// Generar contador que sume uno cada vez que se haga click
+
 
 // Escuchar click en botón
 testButton.addEventListener('click', handleButtonClick);
-// Crear handler de click en botón
-function handleButtonClick(event) {
-  event.preventDefault();
 
+// Crear handler de click en botón
+function handleButtonClick() {
 // En este punto compruebo
 // console.log('CLICK');
 
+// Recoger valor de input en este momento y convertirlo a número
+const userNumber = parseInt(testNumberEl.value);
+
     // Si número aleatorio es correcto
      // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
-    if (aleatoryNumber===testNumberEl.value){
+    if (userNumber===aleatoryNumber){
         testFeedbackEl.innerHTML = 'HAS GANADO, CAMPEONA!';
     }   
     // Si mayor que número aleatorio
         // Escribir  "demasiado alto" en div de feedback
-    else if (aleatoryNumber<testNumberEl.value){
+    else if (userNumber>aleatoryNumber){
         testFeedbackEl.innerHTML = 'Demasiado alto';
     }
     // Si no
@@ -50,4 +58,4 @@ function handleButtonClick(event) {
     }
 }
 
-// Generar contador (for)
+
