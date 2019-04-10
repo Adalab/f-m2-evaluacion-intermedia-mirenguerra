@@ -1,0 +1,22 @@
+body {
+	background: hsla(120,70%,80%,1)
+}
+
+#frog circle, path, line {
+	fill: none;
+	stroke: hsla(120,60%,45%,1);
+	stroke-width: 5px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+}
+
+.svg-frog {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	margin: -125px 0px 0px -125px;
+	width: 250px;
+	height: 250px;
+	cursor: pointer;
+}
