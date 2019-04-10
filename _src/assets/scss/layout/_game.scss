@@ -1,13 +1,47 @@
 body {
     min-height: 100vh;
+    max-width: 800px;
     text-align: center;
-    // font-family: 
     color: $colorSea;
+    font-family: barlow;
+    padding: 100px;
+    margin: auto;
 }
 
 .title{
-    font-size: 40px;
+    font-size: 60px;
     color: $colorPomegranate;
+    margin-bottom: 50px; 
+}
+
+.test__number{
+    width: 60px;
+    height: 40px;
+    font-size: 40px;
+    color: $colorStrawberry;
+    border: 1px $colorLemon solid;
+    margin-bottom: 50px;
+
+}
+
+.test__number-label{
+    font-size: 40px;
+    max-width: 200px;
+}
+
+.test__btn{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: $colorLemon;
+    color: $colorStrawberry;
+    font-size: 24px;
+}
+
+.test__feedback{
+    font-size: 40px;
+    color: $colorWater;
 }
 
 .test__counter{
@@ -24,5 +58,4 @@ body {
     background-color: $colorBanana;
     font-size: 35px;
     color: $colorSea;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
