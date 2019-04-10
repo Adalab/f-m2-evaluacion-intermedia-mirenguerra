@@ -1,0 +1,31 @@
+body {
+    background: grey;
+  }
+  
+  .spinner {
+    box-sizing: border-box;
+    border: solid .75em transparent;
+    background: 50%/cover
+    padding-box;
+  }
+  .spinner, .spinner:before {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 29px;
+    right: 29px;
+    border-radius: 50%;
+  }
+  .spinner:before {
+    z-index: -1;
+    background: -webkit-gradient(linear,right bottom,left top,from(#14aa14),to(#ff8a00));
+    background: linear-gradient(to top left,#14aa14,#ff8a00);
+    animation: r 2s linear infinite;
+    content: '';
+  }
+  
+  @keyframes r {
+    to {
+      transform: rotate(1turn);
+    }
+  }
