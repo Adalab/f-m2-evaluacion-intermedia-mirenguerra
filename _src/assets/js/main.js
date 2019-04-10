@@ -15,6 +15,8 @@ const testCounterEl = document.querySelector('.test__counter');
 const testButton = document.querySelector('.test__btn');
 // Recoger resultado de la función getRandomNumber
 const aleatoryNumber = getRandomNumber();
+// Generar contador 
+let counter = 0;
 
 // Comprobar que hasta aquí va bien
 // console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton);
@@ -27,8 +29,6 @@ function getRandomNumber() {
   } 
 
 
-// Generar contador que sume uno cada vez que se haga click
-
 
 // Escuchar click en botón
 testButton.addEventListener('click', handleButtonClick);
@@ -38,8 +38,8 @@ function handleButtonClick() {
 // En este punto compruebo
 // console.log('CLICK');
 
-// Recoger valor de input en este momento y convertirlo a número
-const userNumber = parseInt(testNumberEl.value);
+    // Recoger valor de input en este momento y convertirlo a número
+    const userNumber = parseInt(testNumberEl.value);
 
     // Si número aleatorio es correcto
      // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
@@ -56,6 +56,10 @@ const userNumber = parseInt(testNumberEl.value);
     else {
         testFeedbackEl.innerHTML = 'Demasiado bajo';
     }
+    
+    // Aumentar el contador que sume uno cada vez que se haga click
+    counter += 1;
+    testCounterEl.innerHTML = counter;
 }
 
 
