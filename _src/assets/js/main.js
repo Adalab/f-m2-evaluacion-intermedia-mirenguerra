@@ -21,15 +21,14 @@ let counter = 0;
 // Comprobar que hasta aquí va bien
 // console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton);
 // Me interesa ver el número para hacer pruebas ahora
-console.log(aleatoryNumber);
+// console.log(aleatoryNumber);
 
 // Generar número aleatorio (Math.random y Math.ceil)
 function getRandomNumber() {
     return Math.ceil(Math.random() * 100);  
   } 
 
-
-
+  
 // Escuchar click en botón
 testButton.addEventListener('click', handleButtonClick);
 
@@ -56,7 +55,7 @@ function handleButtonClick() {
     else {
         testFeedbackEl.innerHTML = 'Demasiado bajo';
     }
-    
+
     // Aumentar el contador que sume uno cada vez que se haga click
     counter += 1;
     testCounterEl.innerHTML = counter;
