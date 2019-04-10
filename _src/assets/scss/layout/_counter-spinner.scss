@@ -1,6 +1,4 @@
-body {
-    background: grey;
-  }
+
   
   .spinner {
     box-sizing: border-box;
@@ -18,8 +16,8 @@ body {
   }
   .spinner:before {
     z-index: -1;
-    background: -webkit-gradient(linear,right bottom,left top,from(#14aa14),to(#ff8a00));
-    background: linear-gradient(to top left,#14aa14,#ff8a00);
+    background: -webkit-gradient(linear,right bottom,left top,from($colorLemon),to($colorPomegranate));
+    background: linear-gradient(to top left,$colorLemon,$colorPomegranate);
     animation: r 2s linear infinite;
     content: '';
   }
