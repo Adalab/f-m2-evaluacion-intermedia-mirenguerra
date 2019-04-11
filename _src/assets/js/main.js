@@ -43,8 +43,12 @@ function handleButtonClick() {
     // Si número aleatorio es correcto
      // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
     if (userNumber===aleatoryNumber){
-        testFeedbackEl.innerHTML = 'HAS GANADO, CAMPEONA!';
+        testFeedbackEl.innerHTML = '¡HAS GANADO!';
     }   
+    // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
+    else if(userNumber<1 || userNumber>100){
+        testFeedbackEl.innerHTML = 'Ese número no vale. Prueba con uno del 1 al 100.';
+    }
     // Si mayor que número aleatorio
         // Escribir  "demasiado alto" en div de feedback
     else if (userNumber>aleatoryNumber){
@@ -52,9 +56,10 @@ function handleButtonClick() {
     }
     // Si no
         //Escribir "demasiado bajo" en div de feedback
-    else {
+    else if(userNumber<aleatoryNumber){
         testFeedbackEl.innerHTML = 'Demasiado bajo';
     }
+   
 
     // Aumentar el contador que sume uno cada vez que se haga click
     counter += 1;
