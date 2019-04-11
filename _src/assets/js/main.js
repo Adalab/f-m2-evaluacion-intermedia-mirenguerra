@@ -15,13 +15,15 @@ const testCounterEl = document.querySelector('.test__counter');
 const testButton = document.querySelector('.test__btn');
 // Recoger resultado de la función getRandomNumber
 const aleatoryNumber = getRandomNumber();
+// Recoger botón de volver a jugar
+const winButton = document.querySelector('.restart__btn');
 // Generar contador 
 let counter = 0;
 
 // Comprobar que hasta aquí va bien
-// console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton);
+console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton, winButton);
 // Me interesa ver el número para hacer pruebas ahora
-// console.log(aleatoryNumber);
+console.log(aleatoryNumber);
 
 // Generar número aleatorio (Math.random y Math.ceil)
 function getRandomNumber() {
@@ -43,7 +45,8 @@ function handleButtonClick() {
     // Si número aleatorio es correcto
      // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
     if (userNumber===aleatoryNumber){
-        testFeedbackEl.innerHTML = '¡HAS GANADO!';
+        testFeedbackEl.innerHTML = '¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>';
+        // Cuando ganes que salga un botón para volver a jugar
     }   
     // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
     else if(userNumber<1 || userNumber>100){
