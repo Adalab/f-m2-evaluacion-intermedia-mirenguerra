@@ -59,6 +59,9 @@ function handleButtonClick() {
     // Aumentar el contador que sume uno cada vez que se haga click
     counter += 1;
     testCounterEl.innerHTML = counter;
+    // Limitar el contador para que no lleguen a ser tres cifras y a partir de ahí ponga '+99' y así no se salga del spinner
+    if (parseInt(counter)>=100){
+        testCounterEl.innerHTML = '+99';
+    }
 }
-
 
