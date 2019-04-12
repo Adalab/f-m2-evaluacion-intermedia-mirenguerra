@@ -32,7 +32,8 @@ function getRandomNumber() {
 // Crear handler para el botón de volver a jugar. ARREGLAR!! PONGO EL CONTADOR A CERO PERO SUMA LOS CLICKS DE LA PARTIDA ANTERIOR!!!
 function handleRestartButtonClick(){
   testNumberEl.value = '';
-  testCounterEl.innerHTML = 0;
+  counter = 0;
+  testCounterEl.innerHTML = counter;
   testFeedbackEl.innerHTML ='Escribe un número y dale a Prueba';
   aleatoryNumber = getRandomNumber();
   console.log('Nuevo número aleatorio: ' + aleatoryNumber);
