@@ -40,14 +40,9 @@ function handleRestartButtonClick(){
   testButton.addEventListener('click', handleButtonClick);
 }
 
-// Escuchar click en botón Prueba
-testButton.addEventListener('click', handleButtonClick);
-
-// Crear handler de click en botón Prueba
-function handleButtonClick() {
-  // Recoger valor de input en este momento y convertirlo a número
-  let userNumber = parseInt(testNumberEl.value);
-
+function feedback(){
+   // Recoger valor de input en este momento y convertirlo a número
+   let userNumber = parseInt(testNumberEl.value);
   // Si número aleatorio es correcto
   // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback y que salga un botón para volver a jugar y se ejecute la función de ese botón cuando se haga click. Escuchar el click del botón de volver a jugar
   if (userNumber===aleatoryNumber){
@@ -73,14 +68,25 @@ function handleButtonClick() {
   else if(isNaN(userNumber)){
     testFeedbackEl.innerHTML = 'No has puesto ningún número. Prueba con uno del 1 al 100.';
   }
+}
 
-  // Aumentar el contador que sume uno cada vez que se haga click
-  counter += 1;
-  testCounterEl.innerHTML = counter;
+function counterF (){
   // Limitar el contador para que no lleguen a ser tres cifras y a partir de ahí ponga '+99' y así no se salga del spinner
   if (parseInt(counter)>=100){
     testCounterEl.innerHTML = '+99';
   }
+}
+
+// Escuchar click en botón Prueba
+testButton.addEventListener('click', handleButtonClick);
+
+// Crear handler de click en botón Prueba
+function handleButtonClick() {
+  // Aumentar el contador que sume uno cada vez que se haga click
+  counter += 1;
+  testCounterEl.innerHTML = counter;
+  feedback();
+  counterF();
 }
 
 
