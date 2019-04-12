@@ -16,12 +16,12 @@ const testButton = document.querySelector('.test__btn');
 // Recoger resultado de la función getRandomNumber
 const aleatoryNumber = getRandomNumber();
 // Recoger botón de volver a jugar
-const winButton = document.querySelector('.restart__btn');
+// const winButtonEl = document.querySelector('.restart__btn');
 // Generar contador 
 let counter = 0;
 
 // Comprobar que hasta aquí va bien
-console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton, winButton);
+// console.log(testNumberEl, testFeedbackEl, testCounterEl, testButton, winButtonEl);
 // Me interesa ver el número para hacer pruebas ahora
 console.log(aleatoryNumber);
 
@@ -43,27 +43,37 @@ function handleButtonClick() {
     const userNumber = parseInt(testNumberEl.value);
 
     // Si número aleatorio es correcto
-     // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback
+     // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback y que salga un botón para volver a jugar y se ejecute la función de ese botón cuando se haga click
     if (userNumber===aleatoryNumber){
         testFeedbackEl.innerHTML = '¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>';
-        // Cuando ganes que salga un botón para volver a jugar
+        const winButtonEl = document.querySelector('.restart__btn');
+        winButtonEl.addEventListener('click', handleRestartButtonClick);
+        function handleRestartButtonClick(){
+            counter = 0;
+            handleButtonClick();
+        }
     }   
     // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
     else if(userNumber<1 || userNumber>100){
         testFeedbackEl.innerHTML = 'Ese número no vale. Prueba con uno del 1 al 100.';
     }
+   
     // Si mayor que número aleatorio
         // Escribir  "demasiado alto" en div de feedback
     else if (userNumber>aleatoryNumber){
-        testFeedbackEl.innerHTML = 'Demasiado alto';
+        testFeedbackEl.innerHTML = 'Demasiado alto.';
     }
     // Si no
         //Escribir "demasiado bajo" en div de feedback
     else if(userNumber<aleatoryNumber){
-        testFeedbackEl.innerHTML = 'Demasiado bajo';
+        testFeedbackEl.innerHTML = 'Demasiado bajo.';
+    }
+    // Si no se cumple nada de lo anterior que diga que ese número no es válido
+    else{
+        testFeedbackEl.innerHTML = 'No has puesto ningún número. Prueba con uno del 1 al 100.';
     }
    
-
+    console.log(userNumber);
     // Aumentar el contador que sume uno cada vez que se haga click
     counter += 1;
     testCounterEl.innerHTML = counter;
@@ -72,4 +82,6 @@ function handleButtonClick() {
         testCounterEl.innerHTML = '+99';
     }
 }
+
+
 
