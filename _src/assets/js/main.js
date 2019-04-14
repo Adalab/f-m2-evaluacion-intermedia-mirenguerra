@@ -42,6 +42,9 @@ function handleRestartButtonClick(){
   testButton.addEventListener('click', handleButtonClick);
   froggyEl.classList.remove('svg-frog__jumping');
 }
+function addFeedbackText(a){
+  testFeedbackEl.innerHTML = a;
+}
 
 function feedback(){
    // Recoger valor de input en este momento y convertirlo a número
@@ -49,28 +52,28 @@ function feedback(){
   // Si número aleatorio es correcto
   // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback y que salga un botón para volver a jugar y se ejecute la función de ese botón cuando se haga click. Escuchar el click del botón de volver a jugar
   if (userNumber===aleatoryNumber){
-    testFeedbackEl.innerHTML = '¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>';
+    addFeedbackText('¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>');
     froggyEl.classList.add('svg-frog__jumping');
     const winButtonEl = document.querySelector('.restart__btn');
     winButtonEl.addEventListener('click', handleRestartButtonClick);
   }
   // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
   else if(userNumber<1 || userNumber>100){
-    testFeedbackEl.innerHTML = 'Ese número no vale. Prueba con uno del 1 al 100.';
+    addFeedbackText('Ese número no vale. Prueba con uno del 1 al 100.');
   }
   // Si mayor que número aleatorio
   // Escribir  "demasiado alto" en div de feedback
   else if (userNumber>aleatoryNumber){
-    testFeedbackEl.innerHTML = 'Demasiado alto.';
+    addFeedbackText('Demasiado alto.');
   }
   // Si no
   //Escribir "demasiado bajo" en div de feedback
   else if(userNumber<aleatoryNumber){
-    testFeedbackEl.innerHTML = 'Demasiado bajo.';
+    addFeedbackText('Demasiado bajo.');
   }
   // Si no se escrube nada que diga que no se ha puesto ningún número
   else if(isNaN(userNumber)){
-    testFeedbackEl.innerHTML = 'No has puesto ningún número. Prueba con uno del 1 al 100.';
+    addFeedbackText('No has puesto ningún número. Prueba con uno del 1 al 100.');
   }
 }
 
