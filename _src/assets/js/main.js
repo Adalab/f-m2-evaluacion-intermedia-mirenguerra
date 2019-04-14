@@ -42,38 +42,38 @@ function handleRestartButtonClick(){
   testButton.addEventListener('click', handleButtonClick);
   froggyEl.classList.remove('svg-frog__jumping');
 }
-function addFeedbackText(a){
-  testFeedbackEl.innerHTML = a;
+function feedback(text){
+  testFeedbackEl.innerHTML = text;
 }
 
-function feedback(){
+function addFeedbackText(){
    // Recoger valor de input en este momento y convertirlo a número
    let userNumber = parseInt(testNumberEl.value);
   // Si número aleatorio es correcto
-  // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback y que salga un botón para volver a jugar y se ejecute la función de ese botón cuando se haga click. Escuchar el click del botón de volver a jugar
+  // Escribir  "¡HAS GANADO!" en div de feedback, que salga un botón para volver a jugar y se ejecute la función de ese botón cuando se haga click. Escuchar el click del botón de volver a jugar. Que la rana salte.
   if (userNumber===aleatoryNumber){
-    addFeedbackText('¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>');
+    feedback('¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>');
     froggyEl.classList.add('svg-frog__jumping');
     const winButtonEl = document.querySelector('.restart__btn');
     winButtonEl.addEventListener('click', handleRestartButtonClick);
   }
   // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
   else if(userNumber<1 || userNumber>100){
-    addFeedbackText('Ese número no vale. Prueba con uno del 1 al 100.');
+    feedback('Ese número no vale. Prueba con uno del 1 al 100.');
   }
   // Si mayor que número aleatorio
   // Escribir  "demasiado alto" en div de feedback
   else if (userNumber>aleatoryNumber){
-    addFeedbackText('Demasiado alto.');
+    feedback('Demasiado alto.');
   }
   // Si no
   //Escribir "demasiado bajo" en div de feedback
   else if(userNumber<aleatoryNumber){
-    addFeedbackText('Demasiado bajo.');
+    feedback('Demasiado bajo.');
   }
   // Si no se escrube nada que diga que no se ha puesto ningún número
   else if(isNaN(userNumber)){
-    addFeedbackText('No has puesto ningún número. Prueba con uno del 1 al 100.');
+    feedback('No has puesto ningún número. Prueba con uno del 1 al 100.');
   }
 }
 
@@ -91,8 +91,9 @@ function incrementCounter(){
 testButton.addEventListener('click', handleButtonClick);
 // Crear handler de click en botón Prueba
 function handleButtonClick() {
-  feedback();
+  addFeedbackText();
   incrementCounter();
+  testNumberEl.value = '';
 }
 
 
