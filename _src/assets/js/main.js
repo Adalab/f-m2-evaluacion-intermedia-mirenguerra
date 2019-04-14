@@ -43,6 +43,7 @@ function handleRestartButtonClick(){
   froggyEl.classList.remove('svg-frog__jumping');
   testNumberEl.disabled = false;
 }
+
 function feedback(text){
   testFeedbackEl.innerHTML = text;
 }
@@ -56,7 +57,7 @@ function win(){
 
 function addFeedbackText(){
    // Recoger valor de input en este momento y convertirlo a número
-   let userNumber = parseInt(testNumberEl.value);
+   let userNumber = parseFloat(testNumberEl.value);
   // Si número aleatorio es correcto
   // Escribir  "¡HAS GANADO!" en div de feedback, que salga un botón para volver a jugar y se ejecute la función de ese botón cuando se haga click. Escuchar el click del botón de volver a jugar. Que la rana salte.
   if (userNumber===aleatoryNumber){
@@ -64,8 +65,8 @@ function addFeedbackText(){
     win();
     
   }
-  // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
-  else if(userNumber<1 || userNumber>100){
+  // Si es mayor de 100 o menor de 1 o decimal que diga que ese número no es válido
+  else if(userNumber<1 || userNumber>100 || userNumber % 1 != 0){
     feedback('Ese número no vale. Prueba con uno del 1 al 100.');
   }
   // Si mayor que número aleatorio
