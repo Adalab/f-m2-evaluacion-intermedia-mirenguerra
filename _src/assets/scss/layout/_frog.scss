@@ -21,7 +21,7 @@ body {
 	cursor: pointer;
 	&__jumping{
 		animation-name: jump;
-		animation-duration: 0.8s;
+		animation-duration: 0.6s;
 		animation-iteration-count: infinite;
 	}   
 	@keyframes jump{

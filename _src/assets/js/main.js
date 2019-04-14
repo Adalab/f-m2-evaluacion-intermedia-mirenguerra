@@ -53,7 +53,6 @@ function feedback(){
     froggyEl.classList.add('svg-frog__jumping');
     const winButtonEl = document.querySelector('.restart__btn');
     winButtonEl.addEventListener('click', handleRestartButtonClick);
-
   }
   // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
   else if(userNumber<1 || userNumber>100){
