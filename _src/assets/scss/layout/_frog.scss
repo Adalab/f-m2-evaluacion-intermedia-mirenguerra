@@ -13,8 +13,7 @@ body {
 
 .svg-frog {
 	position: absolute;
-	top: 82%;
-	left: 50%;
+	bottom: 20px;
 	margin: -125px 0px 0px -125px;
 	width: 250px;
 	height: 250px;
@@ -32,5 +31,11 @@ body {
 		  transform: translateY(-10%);
 		}
 	}
+	@media all and (min-width:768px){
+        bottom: 0px;
+		left: 50%;
+		width: 250px;
+		height: 250px;
+    }
 }
 

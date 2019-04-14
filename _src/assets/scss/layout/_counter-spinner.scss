@@ -8,11 +8,17 @@
   }
   .spinner, .spinner:before {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 29px;
-    right: 29px;
+    width: 80px;
+    height: 80px;
+    top: 36px;
+    right: 15px;
     border-radius: 50%;
+    @media all and (min-width:768px){
+      width: 100px;
+      height: 100px;
+      top: 29px;
+      right: 29px;
+    }
   }
   .spinner:before {
     z-index: -1;

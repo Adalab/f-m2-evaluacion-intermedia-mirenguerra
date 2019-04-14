@@ -1,17 +1,26 @@
 body {
     min-height: 100vh;
-    max-width: 780px;
+    padding: 50px;
     text-align: center;
     color: $colorSea;
     font-family: barlow;
-    padding: 100px;
     margin: auto;
+    @media all and (min-width:768px){
+        max-width: 780px;
+        padding: 100px;
+    }
 }
 
 .title{
-    font-size: 60px;
     color: $colorPomegranate;
-    margin-bottom: 50px; 
+    font-size: 45px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    @media all and (min-width:768px){
+        font-size: 60px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
 }
 
 .test__number{
@@ -20,20 +29,26 @@ body {
     font-size: 40px;
     color: $colorStrawberry;
     border: 1px $colorLemon solid;
-    margin-bottom: 50px;
-
+    margin-bottom: 40px;
+    @media all and (min-width:768px){
+        margin-bottom: 30px;
+    }
 }
 
 .test__number-label{
+    font-size: 30px;
+    @media all and (min-width:768px){
     font-size: 40px;
     max-width: 200px;
+    }
 }
 
 .test__btn{
     width: 100px;
     height: 50px;
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-bottom: 30px;
     background-color: $colorLemon;
     color: $colorStrawberry;
     font-size: 24px;
@@ -41,25 +56,48 @@ body {
 
 .test__feedback{
     display: flex;
-    font-size: 35px;
+    font-size: 30px;
     color: $colorWater;
     justify-content: center;
 }
 
-.test__counter{
+.test__counter{ 
     z-index: 2;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
-    top: 80px;
-    right: 80px;
+    width: 60px;
+    height: 60px;
+    top: 94px;
+    right: 53px;
     border-radius: 50%;
     background-color: $colorBanana;
-    font-size: 35px;
+    font-size: 30px;
     color: $colorSea;
+    @media all and (min-width:768px){
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        top: 80px;
+        right: 80px;
+        font-size: 35px;
+    }
+}
+
+.test__tries{
+    font-size: 22px;
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    @media all and (min-width:768px){
+    top: 40px;
+    right: 80px;
+    }
 }
 
 .restart__btn{
