@@ -1,20 +1,7 @@
-body {
-    min-height: 100vh;
-    padding: 0 40px;
-    text-align: center;
-    color: $colorSea;
-    font-family: barlow;
-    margin: auto;
-    @media all and (min-width:768px){
-        max-width: 780px;
-        padding: 100px;
-    }
-}
-
 .title{
     color: $colorPomegranate;
     font-size: 40px;
-    margin-top: 130px;
+    margin-top: 150px;
     margin-bottom: 10px;
     @media all and (min-width:768px){
         font-size: 60px;

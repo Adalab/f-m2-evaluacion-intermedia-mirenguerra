@@ -8,5 +8,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // border: 1px green solid;
+    border: 1px green solid;
+}
+body {
+	background: $colorBanana;
+    min-height: 100vh;
+    padding: 0 40px;
+    text-align: center;
+    color: $colorSea;
+    font-family: barlow;
+    margin: auto;
+    @media all and (min-width:768px){
+        max-width: 780px;
+        padding: 100px;
+    }
 }
