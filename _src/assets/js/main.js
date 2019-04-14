@@ -70,7 +70,10 @@ function feedback(){
   }
 }
 
-function counterF (){
+ // Aumentar el contador que sume uno cada vez que se haga click
+function incrementCounter(){
+  counter += 1;
+  testCounterEl.innerHTML = counter;
   // Limitar el contador para que no lleguen a ser tres cifras y a partir de ahí ponga '+99' y así no se salga del spinner
   if (parseInt(counter)>=100){
     testCounterEl.innerHTML = '+99';
@@ -79,14 +82,10 @@ function counterF (){
 
 // Escuchar click en botón Prueba
 testButton.addEventListener('click', handleButtonClick);
-
 // Crear handler de click en botón Prueba
 function handleButtonClick() {
-  // Aumentar el contador que sume uno cada vez que se haga click
-  counter += 1;
-  testCounterEl.innerHTML = counter;
   feedback();
-  counterF();
+  incrementCounter();
 }
 
 
