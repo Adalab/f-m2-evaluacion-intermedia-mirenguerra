@@ -19,4 +19,18 @@ body {
 	width: 250px;
 	height: 250px;
 	cursor: pointer;
+	&__jumping{
+		animation-name: jump;
+		animation-duration: 0.8s;
+		animation-iteration-count: infinite;
+	}   
+	@keyframes jump{
+		from {
+		  transform: translateY(10%);
+		}
+		to {
+		  transform: translateY(-10%);
+		}
+	}
 }
+

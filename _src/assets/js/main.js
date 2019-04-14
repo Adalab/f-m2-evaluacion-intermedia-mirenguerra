@@ -16,6 +16,8 @@ const testCounterEl = document.querySelector('.test__counter');
 const testButton = document.querySelector('.test__btn');
 // Recoger resultado de la función getRandomNumber
 let aleatoryNumber = getRandomNumber();
+// Recoger rana
+const froggyEl = document.querySelector('.svg-frog');
 
 // Generar contador
 let counter = 0;
@@ -38,6 +40,7 @@ function handleRestartButtonClick(){
   aleatoryNumber = getRandomNumber();
   console.log('Nuevo número aleatorio: ' + aleatoryNumber);
   testButton.addEventListener('click', handleButtonClick);
+  froggyEl.classList.remove('svg-frog__jumping');
 }
 
 function feedback(){
@@ -47,8 +50,10 @@ function feedback(){
   // Escribir  "¡HAS GANADO, CAMPEONA!" en div de feedback y que salga un botón para volver a jugar y se ejecute la función de ese botón cuando se haga click. Escuchar el click del botón de volver a jugar
   if (userNumber===aleatoryNumber){
     testFeedbackEl.innerHTML = '¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>';
+    froggyEl.classList.add('svg-frog__jumping');
     const winButtonEl = document.querySelector('.restart__btn');
     winButtonEl.addEventListener('click', handleRestartButtonClick);
+
   }
   // Si es mayor de 100 o menor de 1 que diga que ese número no es válido
   else if(userNumber<1 || userNumber>100){
