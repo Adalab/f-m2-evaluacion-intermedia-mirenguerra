@@ -104,5 +104,12 @@ function handleButtonClick() {
   testNumberEl.value = '';
 }
 
-
+// Escuchar el evento cuando se hace enter
+testNumberEl.addEventListener('keyup', enterKey);
+// Crear handler cuando se pulsa enter
+function enterKey(event){
+  if(event.which==13){
+    handleButtonClick();
+  }
+}
 
