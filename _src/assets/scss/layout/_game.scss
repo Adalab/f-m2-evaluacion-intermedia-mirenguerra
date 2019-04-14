@@ -1,6 +1,6 @@
 body {
     min-height: 100vh;
-    padding: 50px;
+    padding: 0 40px;
     text-align: center;
     color: $colorSea;
     font-family: barlow;
@@ -13,9 +13,9 @@ body {
 
 .title{
     color: $colorPomegranate;
-    font-size: 45px;
-    margin-top: 120px;
-    margin-bottom: 40px;
+    font-size: 40px;
+    margin-top: 130px;
+    margin-bottom: 10px;
     @media all and (min-width:768px){
         font-size: 60px;
         margin-top: 70px;
@@ -26,10 +26,10 @@ body {
 .test__number{
     width: 100px;
     height: 40px;
-    font-size: 40px;
+    font-size: 25px;
     color: $colorStrawberry;
     border: 1px $colorLemon solid;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     @media all and (min-width:768px){
         margin-bottom: 30px;
     }
@@ -48,15 +48,18 @@ body {
     height: 50px;
     border-radius: 10px;
     margin-left: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     background-color: $colorLemon;
     color: $colorStrawberry;
-    font-size: 24px;
+    font-size: 20px;
+    @media all and (min-width:768px){
+        margin-bottom: 30px;
+    }
 }
 
 .test__feedback{
     display: flex;
-    font-size: 30px;
+    font-size: 25px;
     color: $colorWater;
     justify-content: center;
 }
@@ -69,7 +72,7 @@ body {
     align-items: center;
     width: 60px;
     height: 60px;
-    top: 94px;
+    top: 70px;
     right: 53px;
     border-radius: 50%;
     background-color: $colorBanana;
@@ -92,7 +95,7 @@ body {
 .test__tries{
     font-size: 22px;
     position: absolute;
-    top: 50px;
+    top: 20px;
     right: 45px;
     @media all and (min-width:768px){
     top: 40px;
