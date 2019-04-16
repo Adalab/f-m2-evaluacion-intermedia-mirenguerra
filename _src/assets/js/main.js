@@ -25,6 +25,7 @@ function handleRestartButtonClick(){
   testButton.addEventListener('click', handleButtonClick);
   froggyEl.classList.remove('svg-frog__jumping');
   testNumberEl.disabled = false;
+  testButton.disabled = true;
 }
 
 function feedback(text){
@@ -36,6 +37,7 @@ function win(){
   const winButtonEl = document.querySelector('.restart__btn');
   winButtonEl.addEventListener('click', handleRestartButtonClick);
   testNumberEl.disabled = true;
+  testButton.disabled = true;
 }
 
 function addFeedbackText(){
