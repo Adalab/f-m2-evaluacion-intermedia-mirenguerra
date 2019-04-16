@@ -45,7 +45,7 @@ function addFeedbackText(){
   if (userNumber===aleatoryNumber){
     feedback('¡HAS GANADO!' + '<button class="restart__btn">¡Juega otra vez!</button>');
     win();  
-  }  else if(userNumber<1 || userNumber>100 || userNumber % 1 != 0){
+  }  else if(userNumber<1 || userNumber>100 || userNumber % 1 !== 0){
     feedback('Ese número no vale. Prueba con uno del 1 al 100.');
   }  else if (userNumber>aleatoryNumber){
     feedback('Demasiado alto.');
