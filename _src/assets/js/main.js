@@ -8,7 +8,7 @@ const froggyEl = document.querySelector('.svg-frog');
 const musicEl = document.querySelector('.music');
 let aleatoryNumber = getRandomNumber();
 let counter = 0;
-// console.log('Número aleatorio: ' + aleatoryNumber);
+console.log('Número aleatorio: ' + aleatoryNumber);
 
 function getRandomNumber() {
   return Math.ceil(Math.random() * 100);
@@ -20,7 +20,7 @@ function handleRestartButtonClick() {
   testCounterEl.innerHTML = counter;
   testFeedbackEl.innerHTML = 'Escribe un número y dale a Prueba';
   aleatoryNumber = getRandomNumber();
-  // console.log('Nuevo número aleatorio: ' + aleatoryNumber);
+  console.log('Nuevo número aleatorio: ' + aleatoryNumber);
   testButton.addEventListener('click', handleButtonClick);
   froggyEl.classList.remove('svg-frog__jumping');
   testNumberEl.disabled = false;
