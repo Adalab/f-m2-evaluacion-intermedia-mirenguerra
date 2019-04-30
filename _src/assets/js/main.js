@@ -25,6 +25,7 @@ function handleRestartButtonClick() {
   froggyEl.classList.remove('svg-frog__jumping');
   testNumberEl.disabled = false;
   testButton.disabled = true;
+  pauseAudio();
 }
 
 function feedback(text) {
@@ -66,6 +67,10 @@ function incrementCounter() {
 
 function playAudio() {
   musicEl.play();
+}
+
+function pauseAudio() {
+  musicEl.pause();
 }
 
 testButton.addEventListener('click', handleButtonClick);
